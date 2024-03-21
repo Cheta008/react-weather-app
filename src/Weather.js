@@ -5,17 +5,17 @@ import axios from "axios";
 export default function Weather(props) {
     let [weatherData, setWeatherData] = useState({ ready: false });
    function displayResponse(response) {
+    console.log(response.data.main)
     setWeatherData({
         ready: true,
-        temperature: response.data.main.temp,
+        temperature: response.data.temperature.current,
         wind: response.data.wind.speed,
-        humidity: response.data.main.humidity,
-        city: response.data.name,
+        humidity: response.data.temperature.humidity,
+        city: response.data.city,
         date: "Wednesday 07:00",
-        description: response.data.weather[0],description,
+        description: response.data.condition.description,
         iconUrl: "https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png"
     });
-    setReady(true);
    }
  
    if (weatherData.ready) {
