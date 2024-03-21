@@ -6,7 +6,7 @@ function App() {
   return (
     <div className="App">
       <div className='container'>
-     <Weather />
+     <Weather defaultCity="Paris"/>
      <footer>
       This project was coded by{" "}
       <a href='https://github.com/Cheta008'>Chukwuma Destiny</a> and is{" "}
