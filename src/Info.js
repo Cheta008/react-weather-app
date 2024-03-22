@@ -1,7 +1,9 @@
 import React from "react";
 import FormatDate from "./FormatDate";
+import MyIcon from "./MyIcon";
 
 export default function Info(props) {
+    return (
     <div>
         <h1>{props.data.city}</h1>
             <ul>
@@ -11,10 +13,7 @@ export default function Info(props) {
             <div className="row mt-3">
                 <div className="col-6">
                     <div className="clearfix">
-                    <img 
-                    src={props.data.iconUrl}
-                    alt={props.data.description}
-                   />
+                        <MyIcon code={props.data.icon}/>
                      <span className="temp">{Math.round(props.data.temperature)}</span>
                      <span className="unit">°C</span>
                 </div>
@@ -27,4 +26,5 @@ export default function Info(props) {
                 </div>
             </div>
     </div>
+    );
 }

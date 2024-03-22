@@ -16,7 +16,7 @@ export default function Weather(props) {
         city: response.data.city,
         date: new Date(response.data.time * 1000),
         description: response.data.condition.description,
-        iconUrl: "https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png"
+        icon: response.data.condition.icon,
     });
    }
 
@@ -27,7 +27,7 @@ export default function Weather(props) {
    }
 
    function handleSubmit(event) {
-    event.preventdefault();
+    event.preventDefault()
     search();
    }
 
@@ -38,7 +38,7 @@ export default function Weather(props) {
    if (weatherData.ready) {
      return (
         <div className="Weather">
-            <form onSubmit={handleSubmit}>
+            <form  onSubmit={handleSubmit}>
                 <div className="row">
                  <div className="col-9">
                 <input type="search" placeholder="Entre a city.." className="form-control" autoFocus="on" onChange={handleCity}/></div>
@@ -47,7 +47,8 @@ export default function Weather(props) {
                 </div>
                 </div>
             </form>
-            <Info info={weatherData}/>
+
+            <Info data={weatherData}/>
             
         </div>
     );
