@@ -1,6 +1,7 @@
 import React from "react";
 import FormatDate from "./FormatDate";
 import MyIcon from "./MyIcon";
+import Temperature from "./Temperature";
 
 export default function Info(props) {
     return (
@@ -14,8 +15,8 @@ export default function Info(props) {
                 <div className="col-6">
                     <div className="clearfix">
                         <MyIcon code={props.data.icon}/>
-                     <span className="temp">{Math.round(props.data.temperature)}</span>
-                     <span className="unit">°C</span>
+
+                        <Temperature  celsuis={props.data.temperature}/>
                 </div>
                 </div>
                 <div className="col-6">
