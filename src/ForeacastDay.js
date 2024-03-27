@@ -4,12 +4,12 @@ import MyIcon from "./MyIcon";
 export default function ForecastDay(props) {
     function max() {
         let temperature = Math.round(props.data.temperature.maximum);
-        return `${temperature}°`
+        return `${temperature}°`;
     }
 
      function min() {
         let temperature = Math.round(props.data.temperature.minimum);
-        return `${temperature}°`
+        return `${temperature}°`;
     }
 
     function day() {
@@ -33,7 +33,7 @@ export default function ForecastDay(props) {
 
 
     return (
-         <div className="col">
+         <div>
                     <div className="Forecast-day">{day()}</div>
                     <MyIcon code={props.data.condition.icon} size={36}/>
                     <div className="Forecast-temperatires">
