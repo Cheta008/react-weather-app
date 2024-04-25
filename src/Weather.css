@@ -10,6 +10,7 @@
 .form-search {
     background: #9BAFF3;
     color: white;
+    width: 50px;
 }
 
 
@@ -58,11 +59,4 @@
 .WeatherTemperature a {
     text-decoration: none;
     color: #9BAFF3;
-}
-
-@media (max-width : 576px) {
-    .form-search {
-        width: 20%;
-        padding-right: 60px;
-    }
 }
